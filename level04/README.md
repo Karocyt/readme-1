@@ -15,8 +15,9 @@ x(param("x"));
 ```
 
 This script listens port 4747 to echo whatever it gets in the `x` variable.
+However, the string is inserted in the command "as is" so we can inject code into it.
 
-`perl ./level04.pl 'x=\$(getflag)'` and variants are not cooperating.
+`perl ./level04.pl 'x=\$(getflag)'` and variants are not cooperating and seems to run as level04 (and no flag04).
 
 `service --status-all` shows an Apache instance running and a copy of this script is also in `/var/www/level04`.
 
